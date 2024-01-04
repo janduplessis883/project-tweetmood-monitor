@@ -12,9 +12,22 @@ clean:
 
 all: install clean
 
+app:
+	@streamlit run tweetmood-monitor/app.py
+
+git_merge:
+	$(MAKE) clean
+	$(MAKE) lint
+	@python tweetmood-monitor/auto_git/git_merge.py
+
+git_push:
+	$(MAKE) clean
+	$(MAKE) lint
+	@python tweetmood-monitor/auto_git/git_push.py
+
 test:
 	@pytest -v tests
 
 # Specify package name
 lint:
-	@black package/
+	@black tweetmood-monitor/

@@ -63,3 +63,4 @@ exchangelib
 textblob
 openai
 sketch
+black

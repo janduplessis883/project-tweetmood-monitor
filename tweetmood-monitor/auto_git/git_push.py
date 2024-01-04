@@ -5,8 +5,8 @@ from colorama import Fore, init
 
 init(autoreset=True)
 
-from xeroconvert.params import LOCAL_GIT_REPO
-from xeroconvert.utils import time_it
+from params import LOCAL_GIT_REPO
+from utils import time_it
 
 repo_path = LOCAL_GIT_REPO
 
